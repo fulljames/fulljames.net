@@ -238,79 +238,24 @@ section+section {
 	border-top: @border;
 }
 
-footer {
-    /* credit: www.subtlepatterns.com */
-    background: url(../../texture_inv.png) repeat center center;
-    //padding-bottom: 15em;
-    margin-top: 3px;
+div.msg {
 
-    div {
-        max-width: @base_width + 38;
+    background-color: fadeout(#cccc00,30);
+    background-image: -webkit-repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(255,255,255,.5) 25px, rgba(255,255,255,.5) 50px);
+    background-image: -moz-repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(255,255,255,.5) 25px, rgba(255,255,255,.5) 50px);
+    background-image: -o-repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(255,255,255,.5) 25px, rgba(255,255,255,.5) 50px);
+    background-image: -ms-repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(255,255,255,.5) 25px, rgba(255,255,255,.5) 50px);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(255,255,255,.5) 25px, rgba(255,255,255,.5) 50px);
+
+    padding: 1em 0;
+
+    p {
+        .fs(14);
+        max-width: @base_width;
         margin: 0 auto;
-        padding-bottom: 25em;
-        //overflow: hidden;
     }
-
-    article {
-        background-color: #fff;
-        padding: 2em 19px;
-
-        float: left;
-        width: 31%;
-
-        position: relative;
-        top: -3px;
-
-        .bs;
-
-        p {
-            .fs(14);
-            line-height: 1.3;
-        }
-
-        h2 {
-            margin-top: 0;
-        }
-    }
-    aside {
-        float: right;
-        width: 63%;
-        margin-top: 2em;
-        border: 1px solid #fff;
-
-        ul {
-            background-color: #fff;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            
-            &.available {
-                li {
-                    float: left;
-                    width: 8.3333333%;
-                    min-height: 25px;
-                    text-indent: -999em;
-
-                    background-color: #ddd;
-                    border-right: 1px solid #bbb;
-
-                    box-sizing: border-box;
-
-                    span {
-                        background-color: fadeout(#f00,50);
-                        display: block;
-                        height: 25px;
-                    }
-                    &.b60 span{
-                        height: 15px;
-                    }
-                    &.b40 span{
-                        height: 10px;
-                    }
-
-                }
-            }
-        }        
+    a {
+        color: #c00;
     }
 }
 
