@@ -1,0 +1,391 @@
+@base_width: 1040px;
+@base_font_size: 16;
+
+@me: #060;
+@ext: #919;
+@me_ext: #911;
+
+@border: 1px solid rgba(128,128,128,0.3);
+
+.ts(@var: 1px 1px 3px rgba(0,0,0,0.6)) {
+    -webkit-text-shadow: @var;
+    -moz-text-shadow: @var;
+    -o-text-shadow: @var;
+    -ms-text-shadow: @var;
+    text-shadow: @var;
+}
+.bs(@var: 2px 2px 3px rgba(0,0,0,0.6)) {
+    -webkit-box-shadow: @var;
+    -moz-box-shadow: @var;
+    -o-box-shadow: @var;
+    -ms-box-shadow: @var;
+    box-shadow: @var;
+}
+.fs(@px: 12, @base: @base_font_size) {
+    @var: (@px/@base) * 100%;
+    font-size: @var;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    color: #333;
+
+    margin: 0;
+    padding: 0;
+}
+
+a { 
+    color: #666;
+    text-decoration: none;
+    &:hover {
+		opacity: 0.8;
+		filter: alpha(opacity=80);
+        text-decoration: underline;
+	}
+
+    &.me {
+        color: @me;
+    }
+    &.ext {
+        color: @ext;
+    }
+    &.me_ext {
+        color: @me_ext;
+    }
+}
+abbr {
+    border-bottom: @border;
+    border-bottom-style: dashed;
+}
+
+/* HTML5 tags */
+header, hgroup, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+
+    .fs(32);
+    .ts;
+}
+h2 {
+    font-style: italic;
+    line-height: 1em;
+    color: #333;
+
+    .fs(26);
+}
+
+header {
+    /* credit: www.subtlepatterns.com */
+    background: url(../../texture.png) repeat center center;
+    
+    hgroup {
+        max-width: @base_width;
+        margin: 0 auto;
+        padding: 0 1.923%;
+
+        h2 {
+            color: #fff;
+            margin: 0.5em 0 0;
+            line-height: 0.65em;
+
+            .fs(64);
+            .ts(0px -2px 1px fadeout(@me,30));
+
+        }
+    }
+}
+
+/* font deck */
+h1, h2 { font-family:"Clarendon URW Wide Medium", Clarendon, 'Century Schoolbook', 'Times New Roman', Times, serif; font-size-adjust:0.477; font-weight:900; font-style:normal; }
+header h2 { font-family:"Clarendon URW Wide Bold Oblique", Clarendon, 'Century Schoolbook', 'Times New Roman', Times, serif; font-size-adjust:0.477; font-weight:bold; font-style:italic; }
+
+section {
+	clear: both;
+	overflow: hidden;
+
+	ul {
+        max-width: @base_width;
+
+		list-style: none;
+		padding: 0 1.923%;
+        margin: 0 auto;
+
+		li {
+
+            h3 {
+                border-bottom: 1px solid rgba(128,128,128,0.2);
+                margin: 0.4em 0 0.2em;
+                position: relative;
+
+                span {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    color: #ccc;
+                    background-color: rgba(255,255,255,0.95);
+                    padding: 0.2em;
+
+                    .fs(9);
+
+                    display: none;
+                }
+                &:hover span {
+                    display: block;
+                }
+            }
+
+            span {
+                .fs(12);
+                color: #999;
+            }
+            p {
+                .fs(14);
+                line-height: 1.3;
+            }
+            dl {
+                .fs(12);
+            }
+            dt {
+                float: left;
+                margin-right: 0.3em;
+
+                &:before {
+                    content: "- ";
+                }
+                &:after {
+                    content: ':';
+                }
+            }
+            dd {
+                margin: 0 0 0.2em 0;
+            }
+
+
+		}
+	}
+
+    h2 {
+        max-width: @base_width;
+        margin: 1em auto;
+        padding: 0 1.923%;
+    }
+
+    &.contacts {
+
+        ul {
+            overflow: hidden;
+            margin: 2em auto;
+
+            .fs(14);
+        }
+        li {
+			float: left;
+			margin-right: 1em;
+
+	        a {
+	            font-weight: bold;
+            }
+        }
+    }	
+    &.writing {
+
+        ul {
+            margin-bottom: 2em;
+        }
+        li {
+            overflow: auto;
+            margin: 0 0 0.5em 0;
+
+            a {
+                font-weight: bold;
+                margin-right: 10px;
+            }
+        }
+    }    
+	&.projects,
+    &.tools	 {
+
+        li {
+            margin: 0;
+            padding: 0 1em 0 0;
+
+            float: left;
+            width: 33.3333333%;
+            min-height: 220px;
+
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+
+        }
+    }
+    &.tools {
+        .bs(0 2px 3px rgba(0,0,0,0.6));
+
+        li {
+            min-height: 150px;
+        }
+    }
+}
+
+section+section {
+	border-top: @border;
+}
+
+footer {
+    /* credit: www.subtlepatterns.com */
+    background: url(../../texture_inv.png) repeat center center;
+    //padding-bottom: 15em;
+    margin-top: 3px;
+
+    div {
+        max-width: @base_width + 38;
+        margin: 0 auto;
+        padding-bottom: 25em;
+        //overflow: hidden;
+    }
+
+    article {
+        background-color: #fff;
+        padding: 2em 19px;
+
+        float: left;
+        width: 31%;
+
+        position: relative;
+        top: -3px;
+
+        .bs;
+
+        p {
+            .fs(14);
+            line-height: 1.3;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    }
+    aside {
+        float: right;
+        width: 63%;
+        margin-top: 2em;
+        border: 1px solid #fff;
+
+        ul {
+            background-color: #fff;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            
+            &.available {
+                li {
+                    float: left;
+                    width: 8.3333333%;
+                    min-height: 25px;
+                    text-indent: -999em;
+
+                    background-color: #ddd;
+                    border-right: 1px solid #bbb;
+
+                    box-sizing: border-box;
+
+                    span {
+                        background-color: fadeout(#f00,50);
+                        display: block;
+                        height: 25px;
+                    }
+                    &.b60 span{
+                        height: 15px;
+                    }
+                    &.b40 span{
+                        height: 10px;
+                    }
+
+                }
+            }
+        }        
+    }
+}
+
+// header sizing and columns for mid-size screens
+@media screen and (max-width: 930px) {
+    header hgroup h2 {
+        .fs(48);
+    }
+}
+@media screen and (max-width: 705px) {
+    header hgroup h1 {
+        .fs(26);
+    }
+    header hgroup h2 {
+        .fs(36);
+    }
+    section {
+        &.projects,
+        &.tools	 {
+
+            li {
+                width: 50%;
+            }
+        }
+    }
+    footer {
+        article {
+            border-top: @border;
+            width: auto;
+        }
+    }
+}
+
+// drop to single column view with no tag rollovers
+@media screen and (max-width: 550px), screen and (max-device-width: 480px) {
+    section {
+        &.projects,
+        &.tools	 {
+
+            li {
+                width: 100%;
+                float: none;
+                min-height: 0;
+                padding-bottom: 1em;
+
+                h3 span {
+                    position: static;
+                    display: block;
+
+                    .fs(12);
+                    color: #999;
+
+                    padding-left: 0;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+// font-sizing for iOS
+@media screen and (max-device-width: 480px) {
+    header hgroup {
+        h1 {
+            .fs(14);
+        }
+        h2 {
+            .fs(22);
+        }
+    }
+
+    h2 {
+        .fs(16);
+    }
+    h3 {
+        .fs(14);
+    }
+}
