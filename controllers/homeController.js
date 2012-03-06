@@ -19,6 +19,10 @@ exports.index = function (req, res) {
         'writing': {
             'title': 'Recent writing',
             'links': [{
+                'href': 'http://12412.org/2012/03/using-perch-with-the-slim-framework/',
+                'label': 'Using Perch with the Slim PHP framework',
+                'meta': '05 Mar 12 for 12412.org'
+            },{
                 'href': 'http://red-badger.com/Blog/post/HTML5-prototyping-with-Node-and-Knockout.aspx',
                 'label': 'HTML5 prototyping with Node and Knockout',
                 'meta': '03 Jan 12 for Red Badger'
@@ -35,6 +39,17 @@ exports.index = function (req, res) {
         'projects': {
             'title': 'Projects',
             'items': [{
+                'href': 'http://wtf.12412.org/',
+                'label': 'What the F*******k?',
+                'tools': 'Node, Knockout, Ender',
+                'date': 'March 12',
+                'description': "What the Framework? is a bluffer's guide to web frameworks and languages, intended as a quick reference for tech-heavy conversations.",
+                'credits': [{
+                    'type': 'Design',
+                    'href': 'http://www.threefour.co.uk',
+                    'label': 'Alex Sexton'
+                }]
+            },{
                 'href': 'http://leagueofmeals.org/',
                 'label': 'League of Meals',
                 'tools': 'Slim, Perch, Knockout, LESS',
