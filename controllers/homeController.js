@@ -39,7 +39,7 @@ exports.index = function (req, res) {
         'projects': {
             'title': 'Projects',
             'items': [{
-                'href': 'http://wtf.12412.org/',
+                'href': 'http://whattheframework.com',
                 'label': 'What the F*******k?',
                 'tools': 'Node, Knockout, Ender',
                 'date': 'March 12',
