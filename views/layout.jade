@@ -7,11 +7,11 @@ html(lang="en")
         meta(name="robots",content="index, follow")
         meta(name="viewport",content="width=device-width; initial-scale=1.0")
         link(rel="shortcut icon", href="favicon.ico")
-        //if IE
+        //if lt IE 9
             meta(http-equiv="imagetoolbar", content="no")
-            script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+            script(src="js/html5.js")
 
-        link(rel="stylesheet",href="http://f.fontdeck.com/s/css/qGsJp/g4FtJ9GEUrsomiNhMRb7Y/dev.fulljames.net/1094.css",type="text/css")
+        link(rel="stylesheet",href="http://f.fontdeck.com/s/css/qGsJp/g4FtJ9GEUrsomiNhMRb7Y/fulljames.net/1094.css",type="text/css")
         link(rel="stylesheet",href="/styles/style.css",type="text/css",media="screen")
 
     body
@@ -23,5 +23,5 @@ html(lang="en")
 
         != body
 
-        .msg: p This version of the Minimum Viable Portfolio is in an experiment running in Node.js to test the reliability of Node on my web hosting. It uses Express for application routing and Jade as a view engine. The LESS file used for styling is compiled to CSS by the application on server start.&nbsp;
+        .msg: p Minimum Viable Portfolio runs on Node.js, using Express for application routing and Jade as a view engine. The LESS file used for styling is compiled to CSS by the application on server start.&nbsp;
             a.me_ext(href="https://github.com/fulljames/fulljames.net",rel="external") View source on Github
