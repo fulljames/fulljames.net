@@ -91,13 +91,19 @@ header {
         padding: 0 1.923%;
 
         h2 {
-            color: #fff;
             margin: 0.5em 0 0;
             line-height: 0.65em;
 
             .fs(64);
-            .ts(0px -2px 1px fadeout(@me,30));
 
+            a {
+                color: #fff;
+                .ts(3px -3px 1px fadeout(@me,30));
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
@@ -171,10 +177,16 @@ section {
 		}
 	}
 
-    h2 {
+    h2,h4 {
         max-width: @base_width;
         margin: 1em auto;
         padding: 0 1.923%;
+    }
+    h4 {
+        margin: 0.3em auto;
+        color: #999;
+        font-weight: normal;
+        font-size: 75%;
     }
 
     &.contacts {
@@ -196,8 +208,10 @@ section {
     }	
     &.writing {
 
+        padding-bottom: 1em;
+
         ul {
-            margin-bottom: 2em;
+            margin-bottom: 1em;
         }
         li {
             overflow: auto;

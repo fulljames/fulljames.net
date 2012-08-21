@@ -2,6 +2,7 @@ exports.index = function (req, res) {
 
     var contacts = require('../data/contacts.js');
     var projects = require('../data/projects.js');
+    var articles = require('../data/articles.js');
     var writing = require('../data/external_writing.js');
     var tools = require('../data/tools.js');
 
@@ -11,7 +12,14 @@ exports.index = function (req, res) {
         },
         'writing': {
             'title': 'Recent writing',
-            'links': writing.items
+            'int': {
+                'title': 'Here',
+                'links': articles.items
+            },
+            'ext': {
+                'title': 'Elsewhere',
+                'links': writing.items
+            }
         },
         'projects': {
             'title': 'Projects',

@@ -5,8 +5,16 @@ section.contacts
 
 section.writing
     h2= data.writing.title
+
+    h4= data.writing.int.title
     ul
-        - each link in data.writing.links
+        - each link in data.writing.int.links
+            li
+                a.me(href='/articles/#{link.href}', rel="external")= link.label
+                span.data= link.meta
+    h4= data.writing.ext.title
+    ul
+        - each link in data.writing.ext.links
             li
                 a.me(href=link.href, rel="external")= link.label
                 span.data= link.meta
