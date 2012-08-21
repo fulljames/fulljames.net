@@ -191,7 +191,7 @@ section {
         }
     }
 
-    h2,h4 {
+    h2,h3,h4 {
         max-width: @base_width;
         margin: 1em auto;
         padding: 0 1.923%;
@@ -272,6 +272,44 @@ section {
 
         li {
             min-height: 150px;
+        }
+    }
+    &.article {
+        h2 {
+            margin-bottom: 0;
+        }
+        h3 {
+            font-family:"Clarendon URW Wide Medium", Clarendon, 'Century Schoolbook', 'Times New Roman', Times, serif; font-size-adjust:0.477; font-weight:900; font-style:normal;
+            clear: left;
+
+            .fs(22);
+        }
+
+        pre {
+            max-width: @base_width;
+            margin: 0.3em auto;
+            padding: 0 1.923%;
+
+            code {
+                display: inline-block;
+
+                padding: 10px 20px;
+                border: 1px solid #999;
+                background-color: rgba(192,192,192,0.5);
+            }
+
+        }
+
+        span.meta {
+            max-width: @base_width;
+            margin: 0.3em auto;
+            padding: 0 1.923%;
+
+            display: block;
+
+            .fs(12);
+            color: #999;
+
         }
     }
     &.error {

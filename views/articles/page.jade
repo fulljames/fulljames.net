@@ -1,6 +1,13 @@
 include ../contacts
 
-section
+section.article(class=data.article.href)
     a.me.back(href='/articles') All articles
 
-    h2= data.article
+    - if (data.article.css) {
+        link(rel="stylesheet",href=data.article.css)
+    - }
+
+    h2=data.article.label
+    span.meta=data.article.meta
+
+    !=partial('content/'+data.article.href)

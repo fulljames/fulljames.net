@@ -6,6 +6,7 @@
         "express": "2.x.x",
         "jade": "latest",
         "less": "latest",
+        "marked": "latest",
         "underscore": "latest"
     },
     "engine": "node >=0.6.0"
