@@ -16,6 +16,8 @@ app.configure(function(){
 });
 
 app.get('/',controllers.home.index);
+app.get('/articles',controllers.articles.index);
+app.get('/articles/:article',controllers.articles.page);
 
 app.listen(process.argv.length > 2 ? parseInt(process.argv[2]) : 3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

@@ -1,0 +1,23 @@
+section.contacts
+    ul
+        - each link in data.contacts.links
+            li: a.me_ext(href=link.href,rel="external")= link.label
+
+section.writing
+    h2= data.articles.title
+
+    ul
+        - each item in data.articles.items
+            li
+                a.me(href='/articles/#{item.href}')= item.label
+                span.data= item.meta
+                p= item.abstract
+
+section.writing
+    h2= data.writing.title
+
+    ul
+        - each link in data.writing.links
+            li
+                a.me(href=link.href, rel="external")= link.label
+                span.data= link.meta
