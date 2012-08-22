@@ -3,12 +3,14 @@ include contacts
 section.writing
     h2= data.writing.title
 
-    h4= data.writing.int.title
-    ul
-        - each link in data.writing.int.links
-            li
-                a.me(href='/articles/#{link.href}', rel="external")= link.label
-                span.data= link.meta
+    - if (data.writing.int.links.length) {
+        h4= data.writing.int.title
+        ul
+            - each link in data.writing.int.links
+                li
+                    a.me(href='/articles/#{link.href}', rel="external")= link.label
+                    span.data= link.meta
+    - }
     h4= data.writing.ext.title
     ul
         - each link in data.writing.ext.links

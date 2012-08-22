@@ -1,3 +1,5 @@
+var _ = require('underscore');
+
 exports.index = function (req, res) {
 
     var contacts = require('../data/contacts.js');
@@ -14,7 +16,9 @@ exports.index = function (req, res) {
             'title': 'Recent writing',
             'int': {
                 'title': 'Here',
-                'links': articles.items
+                'links': _.filter(articles.items, function(item) {
+                    return item.live;
+                })
             },
             'ext': {
                 'title': 'Elsewhere',

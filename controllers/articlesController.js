@@ -12,7 +12,9 @@ exports.index = function(req, res) {
         },
         'articles': {
             'title': 'Articles',
-            'items': articles.items
+            'items': _.filter(articles.items, function(item) {
+                return item.live;
+            })
         },
         'writing': {
             'title': 'Elsewhere',
