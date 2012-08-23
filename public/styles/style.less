@@ -316,6 +316,11 @@ section {
 
         }
 
+        a[href^='http'] {
+            color: @ext;
+            font-weight: bold;
+        }
+
         ul {
             list-style: disc;
 
@@ -348,28 +353,27 @@ section {
 
                 border: 1px solid #666;
                 border-collapse: collapse;
+            }
+            th, td {
+                padding: 5px;
+                min-width: 90px;
+                text-align: left;
 
-                th, td {
-                    padding: 5px;
-                    min-width: 90px;
-                    text-align: left;
+                span.note {
+                    .fs(12,14);
 
-                    span.note {
-                        .fs(12,14);
+                    padding-left: 0.5em;
 
-                        padding-left: 0.5em;
-
-                        &:before {
-                            content: '[';
-                        }
-                        &:after {
-                            content: ']';
-                        }
+                    &:before {
+                        content: '[';
+                    }
+                    &:after {
+                        content: ']';
                     }
                 }
-                tbody tr:nth-child(2n+1) {
-                    background-color: #dedede;
-                }
+            }
+            tbody tr:nth-child(2n+1) {
+                background-color: #dedede;
             }
 
             ol {

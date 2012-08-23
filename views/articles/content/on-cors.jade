@@ -104,7 +104,7 @@
 
     Of course, as there always is with new, fun internet techniques, there is a browser support caveat. IE8 and IE9 don't implement XHR 2.0. Oh.
 
-    They do, in Microsoft-of-yore's special way, implement their own protocol, XDomainRequest. But this is pretty useless for our more advanced cases as you can only send GET or POST requests and you can't set custom headers of any kind which means our authentication scenario is out of the window.
+    They do, in Microsoft-of-yore's special way, implement their own protocol, [XDomainRequest](http://). But this is pretty useless for our more advanced cases as you can only send GET or POST requests and you can't set custom headers of any kind which means our authentication scenario is out of the window.
 
     IE10, fortunately, is a product of modern Microsoft and implements XHR 2 and all the above examples will work perfectly.
 
@@ -112,10 +112,10 @@
 
     And in another stroke of good fortune for this narrative, someone has already solved the problem. Well, ish. You may be aware that Adobe added a cross-domain request protocol to Flash some time ago, where instead of setting response headers you instead use a XML policy file on the remote server to control access. It's not perfect, but it will do most of what we want. So yep, we're going to shim one cack-handed proprietary implementation with a different cack-handed proprietary implementation. Yay!
 
-    To do this we're going to use the flXHR jQuery plugin, which is an optimised version of a shim originally created by Kyle Simpson and no-longer (understandably) maintained. Before I go into detail, here are the rules:
+    To do this we're going to use the [flXHR jQuery plugin](http://github.com), which is an optimised version of a shim originally created by Kyle Simpson and no-longer (understandably) maintained. Before I go into detail, here are the rules:
 
     * No PUT or DELETE support in the Flash protocol
-    * No custom headers on GET requests (long-standing Flash bug)
+    * No custom headers on GET requests ([long-standing Flash bug](http://#))
 
     So essentially we have to channel anything that needs authentication via a POST request and let the server sort it out. You could either set up IE<10-specific endpoints to handle this, or in the regular endpoint look for the referer which will be a known .swf file. The AJAX code is going to end up looking like this:
 
