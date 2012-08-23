@@ -5,7 +5,7 @@ exports.items = [{
     'live': false,
     'abstract': 'Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est.',
     // custom css for this article
-    'css': '/content/on-cors/article.css',
+    'css': null,
     // custom js for this article
     'js': null
 }];

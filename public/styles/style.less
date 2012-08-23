@@ -7,6 +7,20 @@
 
 @border: 1px solid rgba(128,128,128,0.3);
 
+/* font deck */
+.clarendonMedium() {
+    font-family:"Clarendon URW Wide Medium", Clarendon, 'Century Schoolbook', 'Times New Roman', Times, serif;
+    font-size-adjust:0.477;
+    font-weight:900;
+    font-style:normal;
+}
+.clarendonBoldOblique() {
+    font-family:"Clarendon URW Wide Bold Oblique", Clarendon, 'Century Schoolbook', 'Times New Roman', Times, serif;
+    font-size-adjust:0.477;
+    font-weight:bold;
+    font-style:italic;
+}
+
 .ts(@var: 1px 1px 3px rgba(0,0,0,0.6)) {
     -webkit-text-shadow: @var;
     -moz-text-shadow: @var;
@@ -108,9 +122,12 @@ header {
     }
 }
 
-/* font deck */
-h1, h2 { font-family:"Clarendon URW Wide Medium", Clarendon, 'Century Schoolbook', 'Times New Roman', Times, serif; font-size-adjust:0.477; font-weight:900; font-style:normal; }
-header h2 { font-family:"Clarendon URW Wide Bold Oblique", Clarendon, 'Century Schoolbook', 'Times New Roman', Times, serif; font-size-adjust:0.477; font-weight:bold; font-style:italic; }
+h1, h2 {
+    .clarendonMedium;
+}
+header h2 {
+    .clarendonBoldOblique;
+}
 
 section {
 	clear: both;
@@ -275,14 +292,36 @@ section {
         }
     }
     &.article {
+
+        padding-bottom: 3em;
+
         h2 {
             margin-bottom: 0;
+            clear: left;
         }
         h3 {
-            font-family:"Clarendon URW Wide Medium", Clarendon, 'Century Schoolbook', 'Times New Roman', Times, serif; font-size-adjust:0.477; font-weight:900; font-style:normal;
-            clear: left;
-
+            .clarendonMedium;
             .fs(22);
+        }
+
+        span.meta {
+            max-width: @base_width;
+            margin: 0.3em auto;
+            padding: 0 1.923%;
+
+            display: block;
+
+            .fs(12);
+            color: #999;
+
+        }
+
+        ul {
+            list-style: disc;
+
+            li {
+                margin: 0 0 0.3em 2em;
+            }
         }
 
         pre {
@@ -297,19 +336,51 @@ section {
                 border: 1px solid #999;
                 background-color: rgba(192,192,192,0.5);
             }
-
         }
 
-        span.meta {
+        div.table {
             max-width: @base_width;
-            margin: 0.3em auto;
+            margin: 0 auto;
             padding: 0 1.923%;
 
-            display: block;
+            table {
+                .fs(14);
 
-            .fs(12);
-            color: #999;
+                border: 1px solid #666;
+                border-collapse: collapse;
 
+                th, td {
+                    padding: 5px;
+                    min-width: 90px;
+                    text-align: left;
+
+                    span.note {
+                        .fs(12,14);
+
+                        padding-left: 0.5em;
+
+                        &:before {
+                            content: '[';
+                        }
+                        &:after {
+                            content: ']';
+                        }
+                    }
+                }
+                tbody tr:nth-child(2n+1) {
+                    background-color: #dedede;
+                }
+            }
+
+            ol {
+                .fs(12);
+            }
+        }
+
+        caption {
+            .clarendonMedium;
+
+            margin-bottom: 0.3em;
         }
     }
     &.error {
