@@ -1,0 +1,20 @@
+include ../contacts
+
+section.article.fiction(class=data.article.href)
+    a.me.back(href='/fiction') All fiction
+
+    - if (data.article.css) {
+        link(rel="stylesheet",href=data.article.css)
+    - }
+
+    h2 ##{data.article.index} - #{data.article.label}
+    span.meta=data.article.meta
+
+    !=partial('content/'+data.article.href)
+
+section.article.context
+    h3 Context
+
+    p=data.article.context
+
+include about

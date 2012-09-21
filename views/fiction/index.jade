@@ -1,0 +1,13 @@
+include ../contacts
+
+section.writing
+    h2= data.fiction.title
+
+    ul
+        - each item in data.fiction.items
+            li
+                a.me(href='/fiction/#{item.href}') ##{item.index} - #{item.label}
+                span.data= item.meta
+                p= item.abstract
+
+include about
