@@ -43,5 +43,5 @@ exports.page = function(req,res, next) {
         next();
     }
 
-    res.render("fiction/page", { title: 'stephen fulljames - fiction', data: data })
+    res.render("fiction/page", { title: 'stephen fulljames - fiction - ' + data.article.label, data: data })
 };
