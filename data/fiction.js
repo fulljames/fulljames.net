@@ -1,4 +1,16 @@
 exports.items = [{
+    'href': 'home-time',
+    'index': '04',
+    'label': "Home Time",
+    'meta': '12 Oct 2012',
+    'live': true,
+    'abstract': "The destination indicator has been saying one minute for the last six minutes, and behind me the eastbound platform at Hannover Circus is filling with people.",
+    'context': 'A bit of stream of consciousness about the travails of the long-distance commuter.',
+    // custom css for this article
+    'css': null,
+    // custom js for this article
+    'js': null
+},{
     'href': 'the-kid-who-believes-hes-galactus',
     'index': '03',
     'label': "The Kid Who Believes He's Galactus",
