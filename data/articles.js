@@ -1,9 +1,9 @@
 exports.items = [{
-    'href': 'on-cors',
-    'label': 'On Cross-Origin-Resource-Sharing',
-    'meta': '21 Aug 2012',
-    'live': false,
-    'abstract': 'Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est.',
+    'href': 'deleting-jquery',
+    'label': 'Deleting jQuery',
+    'meta': '12 Oct 2012',
+    'live': true,
+    'abstract': 'Notes and slides from a talk I gave at Points Brighton on the 11th October 2012',
     // custom css for this article
     'css': null,
     // custom js for this article

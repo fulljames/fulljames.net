@@ -16,8 +16,8 @@ app.configure(function(){
 });
 
 app.get('/',controllers.home.index);
-//app.get('/articles',controllers.articles.index);
-//app.get('/articles/:article',controllers.articles.page);
+app.get('/articles',controllers.articles.index);
+app.get('/articles/:article',controllers.articles.page);
 app.get('/fiction',controllers.fiction.index);
 app.get('/fiction/:article',controllers.fiction.page);
 

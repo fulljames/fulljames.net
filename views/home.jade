@@ -11,7 +11,7 @@ section.writing
                     a.me(href='/articles/#{link.href}')= link.label
                     span.data= link.meta
     - }
-    - // h4= data.writing.ext.title
+    h4= data.writing.ext.title
     ul
         - each link in data.writing.ext.links
             li

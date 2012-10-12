@@ -1,0 +1,34 @@
+:markdown
+    <p><script async class="speakerdeck-embed" data-id="5077e13fc94f35000202bd9c" data-ratio="1.7777777777777777" src="//speakerdeck.com/assets/embed.js"></script></p>
+
+    These are the slides from a talk I gave on the 12th October 2012 at Points Brighton, a small evening conference for web developers and designers. They will be slightly out of context on their own so I've written a bit about what I spoke about to try and give them some.
+
+    I was mainly talking about jQuery, but if you prefer one of the other large Javascript frameworks just imagine its about that instead. The point is basically the same.
+
+    I find the best talks at web events aren't necessarily those that tell you stuff you don't know, but present whatever they have in a provocative way, to make the audience think. I’d rather try and achieve that than dig through some code you’ll have forgotten about after the third beer (Points is an evening event so we had a few).
+
+    So the provocation was, imagine what would happen if there was somehow a way to delete jQuery from the entire internet? Obviously this couldn't happen, but perhaps it would make you think about why you use jQuery, what you use it for and what you might do if you couldn't use it.
+
+    I started by looking back, with a personal take on how Javascript development and libraries have evolved over the years and how our understanding, thinking and tooling has improved. What all of these advances have in common is that they attempt to level the playing field between browsers and smooth out the bumps in front end web development.
+
+    That took us up to the present day, where research has shown that around 25 million websites now use jQuery, or roughly 40% of the top 1 million by traffic. 2 million-ish on MooTools, 1.5 million on jQuery UI.
+
+    So there are a lot of copies of weighty Javascript libraries around, but how many actually need it all? I used as an example the default web project in ASP.net MVC 4.0, which includes a ton of libraries which - admittedly you don't have to use - but it makes it easy to go along with it and just chuck them. The shiny, rounded corner kitchen sink analogy, if you like.
+
+    In my own development I started looking at what I actually needed from a Javascript library. For a simple site like What The Framework, all jQuery would be doing was DOM ready and some light DOM selection before handing over to a client-side MVC framework. So perhaps there's another way to go about this while still avoiding the cross-browser headaches.
+
+    Newer browsers implement newer versions of Javascript so a lot of things, like Object methods, we would have previously gone to jQuery or Underscore for are now native. But there are still inconsistences and the need for legacy support, much as we try to ignore it. So its not quite time to throw out libraries altogether. And I’m not sure we ever will, they still do interesting things that aren’t really the core mission of javascript. So perhaps they’ll get more specialised instead... the likes of game engines, 3D rendering, Canvas tools, and so on.
+
+    But the jQuery pattern is compelling. And once you're comfortable with something its a bit of an effort to force yourself out of that comfort zone and learn. But looking back I've relearned pretty much everything I do since I started, probably several times, so its worth keeping in mind that learning and trying new things is how development has advanced to where it is now and how it will keep advancing in the future.
+
+    There are alternatives. RequireJS is a great tool for deferred, modular loading but its use seems to be still more towards managing larger, multi-functional libraries. For smaller building blocks there's a great site, MicroJS, which lists small Javascript tools for pretty much anything you can imagine. But it would still be great for these blocks to fit into a common framework, just one that you as a developer can have more control over what goes into it and how it works.
+
+    In the end this lead me to Ender, which is billed as a NPM-style package manager for the browser, letting you search for and manage small, loosely-coupled modules and their dependencies and compile them to one file with a common API.
+
+    For What The Framework I ended up with a set of DOM tools, Underscore and Knockout, all minified into 25kb of Javascript. This compares really well with 32kb minified for jQuery on its own, and Ender's use of the dollar variable and the jQuery-like syntax in many modules makes switching over a low friction experience.
+
+    So while there is still a place for jQuery, and still a lot that anyone can learn, I do think it really pays to look at what you need, and what your chosen libraries are doing, in order to get the best out of them and the best coding environment for you.
+
+    ---
+
+    <small>I should probably point out that since coming up with the idea for this talk that jQuery has switched to a modular build from version 1.8, which means you can now pick and choose what you want from it, but at the time of writing this is not immediately apparent to the casual user.</small>
