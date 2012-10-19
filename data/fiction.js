@@ -1,4 +1,16 @@
 exports.items = [{
+    'href': 'scab',
+    'index': '05',
+    'label': "Scab",
+    'meta': '19 Oct 2012',
+    'live': true,
+    'abstract': 'Scab!" I grimace, preparing to weather the storm. "Fuckin scab! Scab!" Ah jesus he\'s off again."',
+    'context': 'Scab originates from around 2006, from a monthly writing competition on a video games forum. The title was the theme word for that month.',
+    // custom css for this article
+    'css': null,
+    // custom js for this article
+    'js': null
+},{
     'href': 'home-time',
     'index': '04',
     'label': "Home Time",
