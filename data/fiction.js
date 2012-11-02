@@ -1,4 +1,16 @@
 exports.items = [{
+    'href': 'an-apology',
+    'index': '06',
+    'label': "An Apology",
+    'meta': '02 Nov 2012',
+    'live': true,
+    'abstract': '  My dearest Sir Eustace, I must apologise profusely, and with the greatest humility, for my actions and those of my companion at the club Thursday last.',
+    'context': 'An Apology originates from around 2006, from a monthly writing competition on a video games forum. The title was the theme word for that month.',
+    // custom css for this article
+    'css': null,
+    // custom js for this article
+    'js': null
+},{
     'href': 'scab',
     'index': '05',
     'label': "Scab",
