@@ -1,4 +1,10 @@
 exports.items = [{
+    'href': 'http://narrowplanet.co.uk',
+    'label': 'Narrow Planet',
+    'tools': 'Node, Express, MongoDB',
+    'date': 'July 12',
+    'description': "Fairly MVP website for my hobby project - providing custom etched brass detail parts and kits to narrow gauge railway modellers."
+},{
     'href': 'http://whattheframework.com',
     'label': 'What the F*******k?',
     'tools': 'Node, Knockout, Ender',

@@ -1,4 +1,8 @@
 exports.items = [{
+    'href': 'http://24ways.org/2012/think-first-code-later/',
+    'label': 'Think First, Code Later',
+    'meta': '07 Dec 12 for 24ways.org'
+},{
     'href': 'http://12412.org/2012/03/running-node-sites-on-webfaction/',
     'label': 'Running Node.js sites on WebFaction',
     'meta': '22 Mar 12 for 12412.org'
