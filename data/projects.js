@@ -1,4 +1,15 @@
 exports.items = [{
+    'href': 'http://makeshift.io',
+    'label': 'Makeshift',
+    'tools': 'CSS gradients, Github Pages',
+    'date': 'January 13',
+    'description': "A quick first site for a new product start-up, a complex CSS gradient pattern is the key visual element. Hosted on Github Pages to allow easy edit and update of flat HTML",
+    'credits': [{
+        'type': 'UX and Design',
+        'href': 'http://makeshift.io',
+        'label': 'Makeshift'
+    }]
+},{
     'href': 'http://narrowplanet.co.uk',
     'label': 'Narrow Planet',
     'tools': 'Node, Express, MongoDB',

@@ -18,18 +18,6 @@ section.writing
                 a.me(href=link.href, rel="external")= link.label
                 span.data= link.meta
 
-section.writing
-    h2= data.fiction.title
-
-    - if (data.fiction.int.links.length) {
-        - //h4= data.writing.int.title
-        ul
-            - each link in data.fiction.int.links
-                li
-                    a.me(href='/fiction/#{link.href}') ##{link.index} - #{link.label}
-                    span.date= link.meta
-    - }
-
 section.projects
     h2 Projects
 
@@ -57,3 +45,15 @@ section.tools
                     a.ext(href=item.href, rel="external")= item.label
                     span= item.meta
                 p= item.description
+
+section.writing
+    h2= data.fiction.title
+
+    - if (data.fiction.int.links.length) {
+        - //h4= data.writing.int.title
+        ul
+            - each link in data.fiction.int.links
+                li
+                    a.me(href='/fiction/#{link.href}') ##{link.index} - #{link.label}
+                    span.date= link.meta
+    - }
