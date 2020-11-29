@@ -1,13 +1,21 @@
-{ "name": "fulljames.net",
-    "version": "0.0.0",
-    "description": "fulljames.net",
-    "author": "stephen@fulljames.net",
-    "dependencies": {
-        "express": "2.x.x",
-        "jade": "latest",
-        "less": "latest",
-        "marked": "latest",
-        "underscore": "latest"
-    },
-    "engine": "node >=0.6.0"
+{
+  "name": "fulljames.net",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "10.0.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.4",
+    "postcss": "^8.1.10",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^2.0.1"
+  }
 }
